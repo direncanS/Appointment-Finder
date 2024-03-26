@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Direncan Şahin</title>
+  <link rel="icon" href="favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type="text/css" rel="stylesheet" href="frameworks/bootstrap.min.css">
+  <link type="text/css" rel="stylesheet" href="frameworks/style.css">
+  <!--Wir haben es hinzugefügt, um zwischen den Seiten post-get zu wechseln-->
+  <script src="frameworks/jquery/jquery-3.6.0.js" type="text/javascript" defer></script>
+  <script src="frameworks/main.js" type="text/javascript" defer></script>
+
+</head>
+
+<body>
+<header class="divheader">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-3">
+        <img class="imglogo" src="favicon.png" alt="logo" onClick="getallmeet()">
+      </div>
+      <nav class="col-9" id="iddivmenu">
+        <div class="divmenuitem" onClick="getallmeet()">
+          Events
+        </div>
+        <div class="divmenuitem" onClick="addmeet()">
+          Add Event
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+<!--Alle Daten kommen zu iddivbody, nur der Inhalt ändert sich-->
+<main class="container mx-auto" id="iddivbody"></main>
+<div id="iddivaddmeet"></div><!--arka planda yeni bir div etiketi geliyor. Join event ekrani bu.-->
+<!--
+Der Benutzer öffnet die Seite index.html.
+Während die Seite geladen wird, wird das DOMContentLoaded-Ereignis im unteren <script>-Tag überwacht
+Die Funktion getallmeet() wird aufgerufen, wenn die Seite geladen wird.
+-->
+<!--Laden/Scrollen/Schließen der Seite wird mit addEventlistener erfasst.
+domcontentload bedeutet, wenn die Seite geladen wird-->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    security();
+    getallmeet();
+  });
+</script>
+</body>
+</html>

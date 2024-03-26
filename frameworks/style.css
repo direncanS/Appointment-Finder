@@ -1,0 +1,151 @@
+body {
+  background-color: rgba(237, 237, 237, 1.00);
+}
+
+.imglogo {
+  height: 50px;
+  cursor: pointer;
+}
+
+.divheader {
+  display: inline-block;
+  position: fixed;
+  width: 100%;
+  height: auto;
+  left: 0;
+  top: 0;
+  text-align: center;
+  padding: 20px 0;
+  z-index: 2;
+  animation-name: headeranime;
+  animation-duration: 60s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes headeranime {
+  0% {
+    background-color: rgba(255, 214, 214, 1.00);
+  }
+  33% {
+    background-color: rgba(214, 240, 255, 1.00);
+  }
+  66% {
+    background-color: rgba(247, 220, 255, 1.00);
+  }
+  100% {
+    background-color: rgba(255, 214, 214, 1.00);
+  }
+}
+
+.divmenuitem {
+  display: inline-block;
+  position: relative;
+  padding: 10px 3px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.5s;
+  margin: 0 5px;
+  color: rgba(38, 38, 38, 1.00);
+  border-bottom: 2px solid transparent;
+  z-index: 1;
+}
+
+
+.divmenuitem:hover {
+  border-bottom: 2px solid black;
+}
+
+.divmenuitemactive {
+  display: inline-block;
+  position: relative;
+  padding: 10px 3px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.5s;
+  margin: 0 5px;
+  color: red;
+  border-bottom: 2px solid black;
+  z-index: 1;
+}
+
+#iddivbody {
+  padding-top: 100px;
+  text-align: center;
+  transition: all 0.1s;
+  transform-origin: left;
+}
+
+#iddivaddmeet {
+  display: inline-block;
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white;
+  transition: all 0.4s;
+  transform: scale(0);
+  text-align: center;
+  padding-top: 50px;
+}
+
+.card-body > h4 {
+  background-color: rgba(128, 205, 255, 1.00);
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+thead > tr > th {
+  background-color: #BDFBFF;
+}
+
+.divnotice {
+  display: inline-block;
+  position: fixed;
+  background-color: white;
+  width: 300px;
+  left: -webkit-calc(50% - 150px);
+  left: calc(50% - 150px);
+  top: -500px;
+  transition: all 0.4s;
+  padding: 20px 10px;
+  box-shadow: 0 2px 4px 3px gray;
+  border: 3px solid black;
+  transform: scale(0);
+  text-align: center;
+  border-radius: 5px;
+  z-index:5;
+}
+
+.divclosex {
+  display: inline-block;
+  position: relative;
+  text-align: right;
+  font-size: 22px;
+  font-weight: bold;
+  float: right;
+  right: 20px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.datetitle {
+  background-color: transparent;
+  padding: 5px;
+  font-weight: bold;
+  text-align: left;
+  border-bottom: thin solid white;
+  font-size: 20px;
+  color: white;
+}
+
+#iddivmeettime {
+  cursor: default;
+}
+nav {
+  position: relative;
+  z-index: 1;
+}
+
